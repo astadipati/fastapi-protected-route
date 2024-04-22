@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from tortoise.contrib.fastapi import register_tortoise
 from config.settings import Config
 from api.auth_route import auth_router
-from api.hub import hub_router
+from api.hub_route import hub_router
 
 import uvicorn
 
