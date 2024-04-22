@@ -65,12 +65,6 @@ async def verified_user(token: str = Depends(oauth_scheme))->dict:
         user = await User.filter(email=data['user_name']).first()
         if not user:
             raise error
-        # generate new refresh token and update user
-        # data = {'user_name': user.email}
-        # refresh_tkn = create_refresh_token(data)
-        # await User.filter(email=user.email).update(**{'refresh_token':refresh_tkn})
-        # # generate new access token
-        # access_tkn = create_access_jwt(data)
         
         return user
     except JWTError:

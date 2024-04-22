@@ -63,5 +63,6 @@ async def refresh(token_data:dict = Depends(authorize)):
 
 @auth_router.get('/data')
 async def protected_data(user:dict = Depends(verified_user)):
-    return {'status':'Authorized',
-            'email':user.email}
+    return user 
+# {'status':'Authorized',
+#             'email':user.email}
