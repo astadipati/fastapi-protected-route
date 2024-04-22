@@ -7,7 +7,20 @@ from api.sdr_route import sdr_router
 
 import uvicorn
 
-app = FastAPI()
+app = FastAPI(
+    title="API NMS N3 Skeleton",
+    description="API for handle SDR Hub Capacity and SDR User Terminal Test",
+    version="0.0.1",
+    terms_of_service="",
+    contact={
+        "name": "NMS Team",
+    },
+    license_info={
+        "name": "n",
+        "url": "https://n.co.id",
+    },
+)
+
 for router in [auth_router, hub_router, sdr_router]:
     app.include_router(router)
 # app.include_router([auth_router,hub_router])
