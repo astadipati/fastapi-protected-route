@@ -13,7 +13,14 @@ pip install -r --upgrade requirement.txt
 ## Usage
 
 ```python
-run project using uvicorn or python main.py```
+#create .env file for db connection
+ie : DB_URL = mysql://user:passwd@localhost:3306/jwt
+
+#migrate
+aerich migrate
+
+run project using uvicorn or python main.py
+```
 
 ## Contributing
 
