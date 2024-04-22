@@ -3,11 +3,12 @@ from tortoise.contrib.fastapi import register_tortoise
 from config.settings import Config
 from api.auth_route import auth_router
 from api.hub_route import hub_router
+from api.sdr_route import sdr_router
 
 import uvicorn
 
 app = FastAPI()
-for router in [auth_router, hub_router]:
+for router in [auth_router, hub_router, sdr_router]:
     app.include_router(router)
 # app.include_router([auth_router,hub_router])
 
