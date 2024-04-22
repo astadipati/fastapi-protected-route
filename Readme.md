@@ -7,7 +7,7 @@ Protected route with JWT.
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install.
 
 ```bash
-pip install -r --upgrade requirement.txt
+pip install -r --upgrade requirements.txt
 ```
 
 ## Usage

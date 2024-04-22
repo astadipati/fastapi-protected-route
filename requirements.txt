@@ -14,4 +14,3 @@ tortoise-orm
 python-jose
 pydantic[email]
 aerich
-tortoise-orm
