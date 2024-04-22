@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from tortoise.contrib.fastapi import register_tortoise
 from config.settings import Config
 from api.auth_route import auth_router
@@ -32,6 +33,17 @@ register_tortoise(
     generate_schemas=False,
     modules={'models': Config.DB_MODELS}
 )
+
+origins = ["*"]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 
 if __name__ == "__main__":
     uvicorn.run("main:app", reload=True)
