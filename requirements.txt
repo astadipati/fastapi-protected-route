@@ -1,0 +1,17 @@
+fastapi
+uvicorn[standart]
+pandas
+pymongo
+requests
+aiomysql
+mysql-connector-python
+python-dotenv
+datetime
+python-dateutil
+bcrypt==4.0.0
+passlib[bcrypt]
+tortoise-orm
+python-jose
+pydantic[email]
+aerich
+tortoise-orm
