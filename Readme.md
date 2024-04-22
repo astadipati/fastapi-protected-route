@@ -19,7 +19,12 @@ ie : DB_URL = mysql://user:passwd@localhost:3306/jwt
 #migrate
 aerich migrate
 
-run project using uvicorn or python main.py
+run project using 
+#uvicorn
+uvicorn main:app --reload --port=8100 --host=0.0.0.0
+
+#  or run with py
+python main.py
 ```
 
 ## Contributing
