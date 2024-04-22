@@ -14,3 +14,4 @@ tortoise-orm
 python-jose
 pydantic[email]
 aerich
+pymongo
