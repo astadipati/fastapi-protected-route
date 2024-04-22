@@ -21,8 +21,7 @@ async def oss_pump_internet( state: str, interface:str, data : dict = Depends(ve
         date = datetime.now()
         st = date.replace(hour=0, minute=0, microsecond=0)
         db = MongoClient(Config.MONGO_URL)
-        db = db['N3']
-        col = db['data_hub_capacity_ansible']
+        col = db['N3']['data_hub_capacity_ansible']
         data_dict=[]
         for x in col.find({"state":state,"interface":interface,"date_created": {"$gte": st}}).sort("_id", -1):
             data_dict.append(x)
